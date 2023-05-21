@@ -1,0 +1,9 @@
+<div class="container">
+  <h3>フォロワー一覧</h3>
+  <% @followers.each do |follower| %>
+    <div class="follower-item">
+      <%= image_tag follower.decorate.avatar, class: 'avatar-xl rounded-circle' %>
+      <%= link_to follower.name, user_path(follower) %>
+    </div>
+  <% end %>
+</div>
